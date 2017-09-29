@@ -14,7 +14,7 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
-namespace DeliveryOnline.Models {
+namespace DeliveryOnline.Models { 
 	public class AsignarRepPedido {
 
 		private DateTime dFechaHoraEntrega;
