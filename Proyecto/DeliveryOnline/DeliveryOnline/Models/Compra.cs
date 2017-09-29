@@ -29,10 +29,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~Compra(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return Id;

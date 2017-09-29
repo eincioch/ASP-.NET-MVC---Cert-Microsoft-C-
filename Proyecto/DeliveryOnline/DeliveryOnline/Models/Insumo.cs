@@ -23,10 +23,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~Insumo(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return Id;

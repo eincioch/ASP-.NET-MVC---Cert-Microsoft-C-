@@ -25,9 +25,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~DetalleCompra(){
-
-		}
 
 		public Double Cantidad{
 			get{

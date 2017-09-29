@@ -31,10 +31,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~Tienda(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return Id;

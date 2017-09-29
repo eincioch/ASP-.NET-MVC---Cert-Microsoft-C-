@@ -25,10 +25,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~DetalleVenta(){
-
-		}
-
 		public Double Cantidad{
 			get{
 				return nCantidad;

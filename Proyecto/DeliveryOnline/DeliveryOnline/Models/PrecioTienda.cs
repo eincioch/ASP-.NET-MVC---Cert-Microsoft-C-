@@ -26,9 +26,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~PrecioTienda(){
-
-		}
 
 		public double Precio{
 			get{

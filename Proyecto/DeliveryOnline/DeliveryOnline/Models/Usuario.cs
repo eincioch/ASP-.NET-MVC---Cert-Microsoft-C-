@@ -29,17 +29,12 @@ namespace DeliveryOnline.Models {
 		public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
 
 
-
-		~Usuario(){
-
-		}
-
 		public string Usuario{
 			get{
-				return cusuario;
+				return cUsuario;
 			}
 			set{
-				cusuario = value;
+                cUsuario = value;
 			}
 		}
 

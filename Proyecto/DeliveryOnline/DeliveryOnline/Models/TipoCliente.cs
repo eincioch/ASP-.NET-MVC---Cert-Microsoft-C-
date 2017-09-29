@@ -23,10 +23,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~TipoCliente(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return id;

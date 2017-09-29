@@ -26,9 +26,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~DetallePedido(){
-
-		}
 
 		public int Cantidad{
 			get{

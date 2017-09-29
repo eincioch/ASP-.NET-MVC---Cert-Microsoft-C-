@@ -26,10 +26,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~Repartidor(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return Id;

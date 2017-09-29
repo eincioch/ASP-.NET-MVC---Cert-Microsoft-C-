@@ -23,10 +23,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~TiposMenu(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return Id;

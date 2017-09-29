@@ -27,10 +27,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~DocuVentaCorrelativo(){
-
-		}
-
 		public int CodigoId{
 			get{
 				return id;

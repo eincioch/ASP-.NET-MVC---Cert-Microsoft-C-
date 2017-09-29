@@ -28,9 +28,6 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		~Pedido(){
-
-		}
 
 		public int CodigoId{
 			get{
