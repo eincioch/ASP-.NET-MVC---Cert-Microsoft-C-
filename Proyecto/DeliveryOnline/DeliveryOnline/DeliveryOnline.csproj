@@ -146,6 +146,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AsignarRepPedido.cs" />
+    <Compile Include="Models\Compra.cs" />
+    <Compile Include="Models\DetalleCompra.cs" />
+    <Compile Include="Models\DetallePedido.cs" />
+    <Compile Include="Models\DetalleVenta.cs" />
+    <Compile Include="Models\Insumo.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\PrecioTienda.cs" />
+    <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\Repartidor.cs" />
+    <Compile Include="Models\Tienda.cs" />
+    <Compile Include="Models\Tiendas.cs" />
+    <Compile Include="Models\TiendaUsuario.cs" />
+    <Compile Include="Models\TipoCliente.cs" />
+    <Compile Include="Models\TipoDocuCorrelativo.cs" />
+    <Compile Include="Models\TipoDocuVenta.cs" />
+    <Compile Include="Models\TiposMenu.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Models\Venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -188,7 +207,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
