@@ -32,7 +32,7 @@ namespace DeliveryOnline.Models {
 				return nEstado;
 			}
 			set{
-				nEstado = value;
+				nEstado = value; 
 			}
 		}
 
