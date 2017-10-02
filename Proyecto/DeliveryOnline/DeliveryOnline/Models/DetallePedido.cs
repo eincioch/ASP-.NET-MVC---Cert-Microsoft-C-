@@ -29,7 +29,8 @@ namespace DeliveryOnline.Models {
         private int nCantidad;
 		private int nEstado;
 		private Double nPrecio;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
+        //public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
+        public DeliveryOnline.Models.Producto m_Producto { get; set; }
 
         public DetallePedido(){
 
