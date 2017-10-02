@@ -22,15 +22,12 @@ namespace DeliveryOnline.Models {
     [Table("TiendaProducto", Schema ="Producto")]
 	public class TiendaProducto {
 
-		private double nPrecio;
-		private int nStock;
+        //    [Key, ForeignKey("m_Tienda")]
+        //    [Required]
+        //    [Column(Order = 1)]
+        //    public int m_Tienda_CodigoId { get; set; } 
 
-        [Key]
-        [Required]
-        [Column(Order = 1)]
-        public int m_Tienda_CodigoId { get; set; } 
-
-        [Key]
+        [Key, ForeignKey("m_Producto")]
         [Required]
         [Column(Order = 2)]
         public int m_Producto_CodigoId { get; set; } 
@@ -41,11 +38,12 @@ namespace DeliveryOnline.Models {
         [Column(Order = 3)]
         public DateTime? dFechaEfectiva { get; set; }
 
-        //[Required]
-        //public virtual ICollection<DeliveryOnline.Models.Producto> m_Producto { get; set; }
+        public virtual DeliveryOnline.Models.Producto m_Producto { get; set; }
 
-        //[Required]
-        //public virtual ICollection<DeliveryOnline.Models.Tienda> m_Tienda { get; set; }
+        //public virtual DeliveryOnline.Models.Tienda m_Tienda { get; set; }
+
+        private double nPrecio;
+        private int nStock;
 
         public TiendaProducto(){
 

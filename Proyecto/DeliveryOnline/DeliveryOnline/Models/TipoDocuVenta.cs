@@ -14,12 +14,18 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
+
 namespace DeliveryOnline.Models {
-	public class TipoDocuVenta {
+
+    [Table("TipoDocuVenta", Schema = "Documento")]
+    public class TipoDocuVenta {
 
 		private string cDescripcion;
 		private int Id;
-		public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo;
+		//public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo;
 
 		public TipoDocuVenta(){
 
@@ -29,7 +35,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -38,7 +46,10 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Descripcion{
+        [Required]
+        [DisplayName("Nombres")]
+        [ConcurrencyCheck, MaxLength(10, ErrorMessage = "Nombre debe tener 7 caracteres o menos"), MinLength(5)]
+        public string Descripcion{
 			get{
 				return Descripcion;
 			}

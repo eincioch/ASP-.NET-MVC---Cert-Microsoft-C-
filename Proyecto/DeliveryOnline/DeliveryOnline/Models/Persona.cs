@@ -40,18 +40,26 @@ namespace DeliveryOnline.Models {
 
 		}
 
-        [DisplayName("Nombre Usuario")]
-        public string Usuario
+        [Required]
+        [Column("Nombres", TypeName = "Varchar")]
+        [DisplayName("Nombres")]
+        [ConcurrencyCheck, MaxLength(100, ErrorMessage = "Nombre debe tener 100 caracteres o menos"), MinLength(5)]
+        public string Nombre
         {
-			get{
-				return cUsuario;
-			}
-			set{
-                cUsuario = value;
-			}
-		}
+            get
+            {
+                return cNombre;
+            }
+            set
+            {
+                cNombre = value;
+            }
+        }
 
-		public string Apellidos{
+        [Required]
+        [Column("Apellidos", TypeName = "Varchar")]
+        [ConcurrencyCheck, MaxLength(100, ErrorMessage = "Apellidos debe tener 100 caracteres o menos"), MinLength(5)]
+        public string Apellidos{
 			get{
 				return cApellidos;
 			}
@@ -61,6 +69,7 @@ namespace DeliveryOnline.Models {
 		}
 
         [Key()]
+        [Column("CodigoId")]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CodigoId{
 			get{
@@ -71,7 +80,10 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Direccion{
+        [Required]
+        [Column("Direccion", TypeName = "Varchar")]
+        [ConcurrencyCheck, MaxLength(100, ErrorMessage = "Direccion debe tener 100 caracteres o menos"), MinLength(5)]
+        public string Direccion{
 			get{
 				return cDireccion;
 			}
@@ -81,6 +93,8 @@ namespace DeliveryOnline.Models {
 		}
 
         [Required]
+        [Column("Email", TypeName = "Varchar")]
+        [ConcurrencyCheck, MaxLength(80, ErrorMessage = "Email debe tener 80 caracteres o menos"), MinLength(5)]
         [DataType(DataType.EmailAddress,ErrorMessage ="E-mail no es valido")]
 		public string Email{
 			get{
@@ -91,7 +105,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string FonoCelular{
+        [Required]
+        [Column("Celular", TypeName = "Varchar")]
+        public string FonoCelular{
 			get{
 				return cFonoCelular;
 			}
@@ -100,18 +116,26 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-        [DisplayName("Nombres")]
-        [ConcurrencyCheck, MaxLength(10, ErrorMessage = "Nombre debe tener 10 caracteres o menos"), MinLength(5)]
-        public string Nombre{
-			get{
-				return cNombre;
-			}
-			set{
-				cNombre = value;
-			}
-		}
+        [Required]
+        [Column("Usuario", TypeName = "Varchar")]
+        [DisplayName("Nombre Usuario")]
+        [ConcurrencyCheck, MaxLength(15, ErrorMessage = "Usuario debe tener 15 caracteres o menos"), MinLength(5)]
+        public string Usuario
+        {
+            get
+            {
+                return cUsuario;
+            }
+            set
+            {
+                cUsuario = value;
+            }
+        }
 
-		public string Password{
+        [Required]
+        [StringLength(100, ErrorMessage = "El {0} al menos debe ser {2} caracteres largos.", MinimumLength = 8)]
+        [DataType(DataType.Password)]
+        public string Password{
 			get{
 				return cPassword;
 			}

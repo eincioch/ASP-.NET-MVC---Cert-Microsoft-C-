@@ -14,14 +14,19 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DeliveryOnline.Models {
-	public class DocuVentaCorrelativo {
+
+    [Table("DocuVentaCorrelativo", Schema = "Documento")]
+    public class DocuVentaCorrelativo {
 
 		private int cCorrelativoActual;
 		private int cSerie;
 		private int Id;
-		public DeliveryOnline.Models.Tienda m_Tienda;
-		public DeliveryOnline.Models.TipoDocuVenta m_TipoDocuVenta;
+		public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
+		public DeliveryOnline.Models.TipoDocuVenta m_TipoDocuVenta { get; set; }
 
 		public DocuVentaCorrelativo(){
 
@@ -31,7 +36,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -40,6 +47,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [Required]
 		public int CorrelativoActual{
 			get{
 				return cCorrelativoActual;
@@ -49,7 +57,8 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public int Serie{
+        [Required]
+        public int Serie{
 			get{
 				return cSerie;
 			}

@@ -169,7 +169,7 @@
     <Compile Include="Models\Tienda.cs" />
     <Compile Include="Models\TiendaUsuario.cs" />
     <Compile Include="Models\TipoCliente.cs" />
-    <Compile Include="Models\TipoDocuCorrelativo.cs" />
+    <Compile Include="Models\DocuVentaCorrelativo.cs" />
     <Compile Include="Models\TipoDocuVenta.cs" />
     <Compile Include="Models\TiposMenu.cs" />
     <Compile Include="Models\Persona.cs" />

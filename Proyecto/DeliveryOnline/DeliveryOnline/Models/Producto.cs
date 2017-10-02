@@ -25,8 +25,14 @@ namespace DeliveryOnline.Models {
 		private string cDescripcion;
 		private string cImagen;
 		private int Id;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto {get; set; }
+
         public DeliveryOnline.Models.TiposMenu m_TiposMenu { get; set; }
+
+        public virtual List<DeliveryOnline.Models.TiendaProducto> m_TiendaProducto {get; set; }
+
+        //cambiando modelo "cada tienda creara sus productos"
+        public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
+                
 
 		public Producto(){
 

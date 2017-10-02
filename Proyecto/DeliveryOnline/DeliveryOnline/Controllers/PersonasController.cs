@@ -46,7 +46,7 @@ namespace DeliveryOnline.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CodigoId,User,Apellidos,Direccion,Email,FonoCelular,Nombre,Password")] Persona persona)
+        public ActionResult Create([Bind(Include = "CodigoId,Usuario,Apellidos,Direccion,Email,FonoCelular,Nombre,Password")] Persona persona)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace DeliveryOnline.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CodigoId,User,Apellidos,Direccion,Email,FonoCelular,Nombre,Password")] Persona persona)
+        public ActionResult Edit([Bind(Include = "CodigoId,Usuario,Apellidos,Direccion,Email,FonoCelular,Nombre,Password")] Persona persona)
         {
             if (ModelState.IsValid)
             {

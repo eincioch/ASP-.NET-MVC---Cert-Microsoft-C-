@@ -25,6 +25,17 @@ namespace DeliveryOnline.Models
 
         public DbSet<DetallePedido> DetallePedidos { get; set; }
 
+        public DbSet<AsignarRepPedido> AsignarRepPedidos { get; set; }
+
+        public DbSet<TipoDocuVenta> TipoDocuVentas { get; set; }
+        public DbSet<DocuVentaCorrelativo> DocuVentaCorrelativos { get; set; }
+
+
+        public DbSet<Venta> Ventas { get; set; }
+
+        public DbSet<DetalleVenta> DetalleVentas { get; set; }
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<TiendaProducto>()

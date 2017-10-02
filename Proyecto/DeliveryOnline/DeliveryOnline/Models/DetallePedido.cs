@@ -25,12 +25,13 @@ namespace DeliveryOnline.Models {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
+
         private int nCantidad;
 		private int nEstado;
 		private Double nPrecio;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }  
+		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
 
-		public DetallePedido(){
+        public DetallePedido(){
 
 		}
 

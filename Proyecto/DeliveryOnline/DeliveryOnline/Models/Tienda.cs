@@ -25,8 +25,10 @@ namespace DeliveryOnline.Models
         private DateTime dFechaRegsitro;
         private int Id = 0;
         private int nEstado;
-        public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
+
+        //public virtual DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
         //public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
+
         public virtual ICollection<Persona> Usuarios { get; set; }
 
         public Tienda()
@@ -80,6 +82,7 @@ namespace DeliveryOnline.Models
             }
         }
 
+        [Required]
         public DateTime FechaRegsitro
         {
             get

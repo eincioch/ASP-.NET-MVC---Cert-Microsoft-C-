@@ -14,18 +14,23 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
-	public class Venta {
+
+    [Table("Venta", Schema = "Tienda")]
+    public class Venta {
 
 		private string cCorrelativo;
 		private string cSerie;
 		private DateTime dFechaPago;
 		private DateTime dFechaRegistro;
 		private int Id;
-		public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo;
-		public DeliveryOnline.Models.Pedido m_Pedido;
-		public DeliveryOnline.Models.DetalleVenta m_DetalleVenta;
-		public DeliveryOnline.Models.Persona m_Persona;
+		public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo { get; set; }
+		public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
+		public List<DeliveryOnline.Models.DetalleVenta> m_DetalleVenta { get; set; }
+		public DeliveryOnline.Models.Persona m_Persona { get; set; }
 
 		public Venta(){
 
@@ -35,7 +40,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -44,16 +51,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Correlativo{
-			get{
-				return cCorrelativo;
-			}
-			set{
-				cCorrelativo = value;
-			}
-		}
+        //This allows null
 
-		public DateTime FechaPago{
+        public DateTime FechaPago{
 			get{
 				return dFechaPago;
 			}
@@ -71,7 +71,8 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Serie{
+        [Required]
+        public string Serie{
 			get{
 				return cSerie;
 			}
@@ -80,6 +81,18 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-	}//end Venta
+        [Required]
+        public string Correlativo
+        {
+            get
+            {
+                return cCorrelativo;
+            }
+            set
+            {
+                cCorrelativo = value;
+            }
+        }
+    }//end Venta
 
 }//end namespace Models

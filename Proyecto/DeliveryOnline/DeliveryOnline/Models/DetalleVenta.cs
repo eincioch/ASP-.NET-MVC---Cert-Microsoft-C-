@@ -14,12 +14,17 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DeliveryOnline.Models {
-	public class DetalleVenta {
+
+    [Table("DetalleVenta", Schema = "Tienda")]
+    public class DetalleVenta {
 
 		private Double nCantidad;
 		private Double nPrecio;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
 
 		public DetalleVenta(){
 
@@ -29,7 +34,12 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public Double Cantidad{
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+
+        [Required]
+        public Double Cantidad{
 			get{
 				return nCantidad;
 			}
@@ -38,6 +48,7 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
+        [Required]
 		public Double Precio{
 			get{
 				return nPrecio;

@@ -14,14 +14,23 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
-namespace DeliveryOnline.Models {
-	public class AsignarRepPedido {
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-		private DateTime dFechaHoraEntrega;
+namespace DeliveryOnline.Models {
+
+    [Table("AsignarRepPedido", Schema = "Tienda")]
+    public class AsignarRepPedido {
+
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+
+        private DateTime dFechaHoraEntrega;
 		private DateTime dFechaHoraSalida;
 		private int nEstado;
-		public DeliveryOnline.Models.Pedido m_Pedido;
-		public DeliveryOnline.Models.Repartidor m_Repartidor;
+		public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
+		public DeliveryOnline.Models.Repartidor m_Repartidor { get; set; }
 
 		public AsignarRepPedido(){
 
@@ -39,6 +48,7 @@ namespace DeliveryOnline.Models {
 				nEstado = value;
 			}
 		}
+
 
 		public DateTime FechaHoraEntrega{
 			get{
