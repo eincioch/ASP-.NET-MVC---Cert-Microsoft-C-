@@ -19,7 +19,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 
 namespace DeliveryOnline.Models {
-	public class Persona {
+
+    [Table("Persona")]
+    public class Persona {
 
 		private string cApellidos;
 		private string cDireccion;
@@ -39,7 +41,7 @@ namespace DeliveryOnline.Models {
 		}
 
         [DisplayName("Nombre Usuario")]
-        public string User
+        public string Usuario
         {
 			get{
 				return cUsuario;
@@ -99,6 +101,7 @@ namespace DeliveryOnline.Models {
 		}
 
         [DisplayName("Nombres")]
+        [ConcurrencyCheck, MaxLength(10, ErrorMessage = "Nombre debe tener 10 caracteres o menos"), MinLength(5)]
         public string Nombre{
 			get{
 				return cNombre;

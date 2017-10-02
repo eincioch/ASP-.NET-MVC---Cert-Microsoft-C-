@@ -14,6 +14,7 @@ using System.Collections.Generic;
 
 namespace DeliveryOnline.Models
 {
+    [Table("Tienda", Schema = "Tienda")]
     public class Tienda
     {
 
@@ -24,7 +25,7 @@ namespace DeliveryOnline.Models
         private DateTime dFechaRegsitro;
         private int Id = 0;
         private int nEstado;
-        public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
+        public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
         //public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
         public virtual ICollection<Persona> Usuarios { get; set; }
 

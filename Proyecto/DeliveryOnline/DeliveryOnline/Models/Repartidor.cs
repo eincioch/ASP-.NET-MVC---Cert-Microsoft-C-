@@ -16,9 +16,12 @@ using System.IO;
 using DeliveryOnline.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace DeliveryOnline.Models {
-	public class Repartidor {
+
+    [Table("Repartidor", Schema = "Tienda")]
+    public class Repartidor {
 
 		private string cNombre;
 		private int Id;
@@ -53,7 +56,10 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Nombre{
+        [Required]
+        [DisplayName("Nombres")]
+        [ConcurrencyCheck, MaxLength(10, ErrorMessage = "Nombre debe tener 10 caracteres o menos"), MinLength(5)]
+        public string Nombre{
 			get{
 				return cNombre;
 			}

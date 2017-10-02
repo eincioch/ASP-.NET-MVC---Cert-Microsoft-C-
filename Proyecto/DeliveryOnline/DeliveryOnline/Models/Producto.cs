@@ -18,13 +18,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
 namespace DeliveryOnline.Models {
-	public class Producto {
+
+    [Table("Producto", Schema = "Producto")]
+    public class Producto {
 
 		private string cDescripcion;
 		private string cImagen;
 		private int Id;
-		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto;
-		public DeliveryOnline.Models.TiposMenu m_TiposMenu;
+		public DeliveryOnline.Models.TiendaProducto m_TiendaProducto {get; set; }
+        public DeliveryOnline.Models.TiposMenu m_TiposMenu { get; set; }
 
 		public Producto(){
 
@@ -45,7 +47,10 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Descripcion{
+        [Required]
+        [Column("Nombre", TypeName = "varchar", Order = 2)]
+        [MaxLength(250), MinLength(10)]
+        public string Descripcion{
 			get{
 				return cDescripcion;
 			}

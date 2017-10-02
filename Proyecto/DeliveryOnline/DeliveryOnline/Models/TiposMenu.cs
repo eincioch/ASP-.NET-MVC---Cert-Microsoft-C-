@@ -10,11 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-
-
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace DeliveryOnline.Models {
-	public class TiposMenu {
+
+    [Table("TiposMenu", Schema = "Producto")]
+    public class TiposMenu {
 
 		private string cDescripcion;
 		private int Id;
@@ -27,7 +29,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -36,7 +40,10 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public string Descripcion{
+        [Required]
+        [Column("Descripcion", TypeName = "varchar", Order = 2)]
+        [MaxLength(250), MinLength(10)]
+        public string Descripcion{
 			get{
 				return cDescripcion;
 			}

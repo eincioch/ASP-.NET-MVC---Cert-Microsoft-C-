@@ -14,14 +14,19 @@ using System.IO;
 
 
 using DeliveryOnline.Models;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
 namespace DeliveryOnline.Models {
-	public class Pedido {
+
+    [Table("Pedido", Schema = "Tienda")]
+    public class Pedido {
 
 		private DateTime dFechaHoraEntrega;
 		private DateTime dFechaHoraRegistro;
 		private int Id;
 		private int nEstado;
-		public DeliveryOnline.Models.DetallePedido m_DetallePedido;
+		public virtual ICollection<DeliveryOnline.Models.DetallePedido> m_DetallePedido { get; set; }
 		public DeliveryOnline.Models.Persona m_Persona;
 
 		public Pedido(){
@@ -32,7 +37,9 @@ namespace DeliveryOnline.Models {
 
 		}
 
-		public int CodigoId{
+        [Key()]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int CodigoId{
 			get{
 				return Id;
 			}
@@ -50,7 +57,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public DateTime FechaHoraEntrega{
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime FechaHoraEntrega{
 			get{
 				return dFechaHoraEntrega;
 			}
@@ -59,7 +68,9 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-		public DateTime FechaHoraRegistro{
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime FechaHoraRegistro{
 			get{
 				return dFechaHoraRegistro;
 			}
