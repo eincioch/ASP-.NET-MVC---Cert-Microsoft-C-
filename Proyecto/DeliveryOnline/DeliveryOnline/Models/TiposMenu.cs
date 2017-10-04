@@ -12,6 +12,7 @@ using System.Text;
 using System.IO;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace DeliveryOnline.Models {
 
@@ -43,6 +44,7 @@ namespace DeliveryOnline.Models {
         [Required]
         [Column("Descripcion", TypeName = "varchar", Order = 2)]
         [MaxLength(250), MinLength(10)]
+        [DisplayName("Descripción")]
         public string Descripcion{
 			get{
 				return cDescripcion;

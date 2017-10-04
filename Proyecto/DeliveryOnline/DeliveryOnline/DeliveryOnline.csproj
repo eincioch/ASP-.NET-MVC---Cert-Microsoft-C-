@@ -151,6 +151,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\TiendaController.cs" />
+    <Compile Include="Controllers\TiposMenusController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +189,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <AdditionalFiles Include="..\DependencyValidation\DependencyValidation1.layerdiagram">
+      <Link>DependencyValidation1.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <Content Include="ClassDiagram1.cd" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -219,6 +225,11 @@
     <Content Include="Views\Personas\Details.cshtml" />
     <Content Include="Views\Personas\Edit.cshtml" />
     <Content Include="Views\Personas\Index.cshtml" />
+    <Content Include="Views\TiposMenus\Create.cshtml" />
+    <Content Include="Views\TiposMenus\Delete.cshtml" />
+    <Content Include="Views\TiposMenus\Details.cshtml" />
+    <Content Include="Views\TiposMenus\Edit.cshtml" />
+    <Content Include="Views\TiposMenus\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -235,6 +246,10 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.9.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

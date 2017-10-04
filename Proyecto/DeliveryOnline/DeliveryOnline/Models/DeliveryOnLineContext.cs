@@ -40,7 +40,14 @@ namespace DeliveryOnline.Models
         {
             modelBuilder.Entity<TiendaProducto>()
                     .Property(p => p.dFechaEfectiva)
+                    .IsRequired()
                     .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Computed);
+
+
+            //Duda como aplica On-Memory a un Tabla
+            //modelBuilder.Entity<Tienda>().ForSqlServerIsMemoryOptimized();
         }
+
+
     }
 }

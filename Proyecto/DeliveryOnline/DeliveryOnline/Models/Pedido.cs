@@ -16,6 +16,7 @@ using System.IO;
 using DeliveryOnline.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace DeliveryOnline.Models {
 
@@ -58,7 +59,9 @@ namespace DeliveryOnline.Models {
 		}
 
         [DataType(DataType.Date)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayName("Fecha/Hora Entrega")]
         public DateTime FechaHoraEntrega{
 			get{
 				return dFechaHoraEntrega;
@@ -70,6 +73,7 @@ namespace DeliveryOnline.Models {
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayName("Fecha/Hora Registro")]
         public DateTime FechaHoraRegistro{
 			get{
 				return dFechaHoraRegistro;
