@@ -22,15 +22,20 @@ namespace DeliveryOnline.Models {
     [Table("AsignarRepPedido", Schema = "Tienda")]
     public class AsignarRepPedido {
 
-        [Key]
+        [Key()]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        //con AZure que arrojo error dejando esta Atributo como 
+        //"private"
         public Guid Id { get; set; }
 
         private DateTime dFechaHoraEntrega;
 		private DateTime dFechaHoraSalida;
 		private int nEstado;
-		public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
-		public DeliveryOnline.Models.Repartidor m_Repartidor { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
+        [Required]
+        public DeliveryOnline.Models.Repartidor m_Repartidor { get; set; }
 
 		public AsignarRepPedido(){
 

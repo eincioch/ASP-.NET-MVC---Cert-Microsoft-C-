@@ -27,10 +27,15 @@ namespace DeliveryOnline.Models {
 		private DateTime dFechaPago;
 		private DateTime dFechaRegistro;
 		private int Id;
-		public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo { get; set; }
-		public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
-		public List<DeliveryOnline.Models.DetalleVenta> m_DetalleVenta { get; set; }
-		public DeliveryOnline.Models.Persona m_Persona { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.DocuVentaCorrelativo m_DocuVentaCorrelativo { get; set; }
+        [Required]
+        public DeliveryOnline.Models.Pedido m_Pedido { get; set; }
+        [Required]
+        public List<DeliveryOnline.Models.DetalleVenta> m_DetalleVenta { get; set; }
+        [Required]
+        public DeliveryOnline.Models.Persona m_Persona { get; set; }
 
 		public Venta(){
 

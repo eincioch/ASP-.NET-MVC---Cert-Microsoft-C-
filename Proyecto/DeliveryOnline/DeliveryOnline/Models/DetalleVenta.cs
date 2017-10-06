@@ -24,8 +24,9 @@ namespace DeliveryOnline.Models {
 
 		private Double nCantidad;
 		private Double nPrecio;
-		//public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
+        //public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
 
+        [Required]
         public DeliveryOnline.Models.Producto m_Producto { get; set; }
 
         public DetalleVenta(){

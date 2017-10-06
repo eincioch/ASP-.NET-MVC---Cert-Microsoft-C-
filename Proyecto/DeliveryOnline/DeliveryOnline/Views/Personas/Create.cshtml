@@ -15,7 +15,16 @@
         <h4>Persona</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        
+
+        <!--Add: Eincio-->
+        <div class="form-group">
+            <label class="control-label col-md-2" for="ClienteId">Tipo Cliente</label>
+            <div class="col-md-10">
+                @Html.DropDownList("ClienteId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ClienteId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -55,8 +64,6 @@
                 @Html.ValidationMessageFor(model => model.FonoCelular, "", new { @class = "text-danger" })
             </div>
         </div>
-
-        
 
         <div class="form-group">
             @Html.LabelFor(model => model.Usuario, htmlAttributes: new { @class = "control-label col-md-2" })

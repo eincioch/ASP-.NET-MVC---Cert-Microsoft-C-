@@ -27,8 +27,12 @@ namespace DeliveryOnline.Models {
 		private DateTime dFechaHoraRegistro;
 		private int Id;
 		private int nEstado;
-		public virtual ICollection<DeliveryOnline.Models.DetallePedido> m_DetallePedido { get; set; }
-		public DeliveryOnline.Models.Persona m_Persona;
+
+        [Required]
+        public virtual ICollection<DeliveryOnline.Models.DetallePedido> m_DetallePedido { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.Persona m_Persona;
 
 		public Pedido(){
 
@@ -83,6 +87,17 @@ namespace DeliveryOnline.Models {
 			}
 		}
 
-	}//end Pedido
+        #region Methodos
+
+        /// <summary>
+        /// Agrega detalle pedido
+        /// </summary>
+        /// <param name="detallePedido"></param>
+        public void agregarDetallePedido(DeliveryOnline.Models.DetallePedido detallePedido) {
+            m_DetallePedido.Add(detallePedido);
+        }
+        #endregion
+
+    }//end Pedido
 
 }//end namespace Models

@@ -29,6 +29,7 @@ namespace DeliveryOnline.Models
         //public virtual DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
         //public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
 
+        [Required]
         public virtual ICollection<Persona> Usuarios { get; set; }
 
         public Tienda()
@@ -55,6 +56,36 @@ namespace DeliveryOnline.Models
             }
         }
 
+        
+        [DisplayName("Razon Social")]
+        [Required]
+        public string RazonSocial
+        {
+            get
+            {
+                return cRazonSocial;
+            }
+            set
+            {
+                cRazonSocial = value;
+            }
+        }
+
+        [DisplayName("Nombre Comercial")]
+        [Required]
+        [StringLength(100)]
+        public string NombreComercial
+        {
+            get
+            {
+                return cNombreComercial;
+            }
+            set
+            {
+                cNombreComercial = value;
+            }
+        }
+
         [Required()]
         [StringLength(500)]
         [DataType(DataType.MultilineText)]
@@ -67,6 +98,19 @@ namespace DeliveryOnline.Models
             set
             {
                 cDireccion = value;
+            }
+        }
+
+        [DataType(DataType.PhoneNumber)]
+        public string Telefono
+        {
+            get
+            {
+                return cTelefono;
+            }
+            set
+            {
+                cTelefono = value;
             }
         }
 
@@ -92,48 +136,6 @@ namespace DeliveryOnline.Models
             set
             {
                 dFechaRegsitro = value;
-            }
-        }
-
-        [DisplayName("Nombre Comercial")]
-        [Required]
-        [StringLength(100)]
-        public string NombreComercial
-        {
-            get
-            {
-                return cNombreComercial;
-            }
-            set
-            {
-                cNombreComercial = value;
-            }
-        }
-
-        [DisplayName("Razon Social")]
-        [Required]
-        public string RazonSocial
-        {
-            get
-            {
-                return cRazonSocial;
-            }
-            set
-            {
-                cRazonSocial = value;
-            }
-        }
-
-        [DataType(DataType.PhoneNumber)]
-        public string Telefono
-        {
-            get
-            {
-                return cTelefono;
-            }
-            set
-            {
-                cTelefono = value;
             }
         }
 

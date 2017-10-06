@@ -26,7 +26,9 @@ namespace DeliveryOnline.Models {
 		private string cNombre;
 		private int Id;
 		private int nEstado;
-		public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
 
 		public Repartidor(){
 

@@ -151,6 +151,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PersonasController.cs" />
     <Compile Include="Controllers\TiendaController.cs" />
+    <Compile Include="Controllers\TipoClientesController.cs" />
     <Compile Include="Controllers\TiposMenusController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -220,16 +221,21 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Tienda\Registrar.cshtml" />
-    <Content Include="Views\Personas\Create.cshtml" />
-    <Content Include="Views\Personas\Delete.cshtml" />
-    <Content Include="Views\Personas\Details.cshtml" />
-    <Content Include="Views\Personas\Edit.cshtml" />
-    <Content Include="Views\Personas\Index.cshtml" />
     <Content Include="Views\TiposMenus\Create.cshtml" />
     <Content Include="Views\TiposMenus\Delete.cshtml" />
     <Content Include="Views\TiposMenus\Details.cshtml" />
     <Content Include="Views\TiposMenus\Edit.cshtml" />
     <Content Include="Views\TiposMenus\Index.cshtml" />
+    <Content Include="Views\TipoClientes\Create.cshtml" />
+    <Content Include="Views\TipoClientes\Delete.cshtml" />
+    <Content Include="Views\TipoClientes\Details.cshtml" />
+    <Content Include="Views\TipoClientes\Edit.cshtml" />
+    <Content Include="Views\TipoClientes\Index.cshtml" />
+    <Content Include="Views\Personas\Create.cshtml" />
+    <Content Include="Views\Personas\Delete.cshtml" />
+    <Content Include="Views\Personas\Details.cshtml" />
+    <Content Include="Views\Personas\Edit.cshtml" />
+    <Content Include="Views\Personas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

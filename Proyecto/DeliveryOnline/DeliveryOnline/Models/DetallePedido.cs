@@ -11,8 +11,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-
-
 using DeliveryOnline.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
@@ -30,6 +28,8 @@ namespace DeliveryOnline.Models {
 		private int nEstado;
 		private Double nPrecio;
         //public DeliveryOnline.Models.TiendaProducto m_TiendaProducto { get; set; }
+
+        [Required]
         public DeliveryOnline.Models.Producto m_Producto { get; set; }
 
         public DetallePedido(){

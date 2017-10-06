@@ -38,6 +38,7 @@ namespace DeliveryOnline.Models {
         [Column(Order = 3)]
         public DateTime? dFechaEfectiva { get; set; }
 
+        [Required]
         public virtual DeliveryOnline.Models.Producto m_Producto { get; set; }
 
         //public virtual DeliveryOnline.Models.Tienda m_Tienda { get; set; }

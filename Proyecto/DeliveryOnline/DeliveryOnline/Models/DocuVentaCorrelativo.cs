@@ -25,8 +25,12 @@ namespace DeliveryOnline.Models {
 		private int cCorrelativoActual;
 		private int cSerie;
 		private int Id;
-		public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
-		public DeliveryOnline.Models.TipoDocuVenta m_TipoDocuVenta { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.Tienda m_Tienda { get; set; }
+
+        [Required]
+        public DeliveryOnline.Models.TipoDocuVenta m_TipoDocuVenta { get; set; }
 
 		public DocuVentaCorrelativo(){
 

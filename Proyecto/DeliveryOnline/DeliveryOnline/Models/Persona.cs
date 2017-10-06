@@ -20,7 +20,7 @@ using System.ComponentModel;
 
 namespace DeliveryOnline.Models {
 
-    [Table("Persona")]
+    [Table("Persona", Schema = "Persona")]
     public class Persona {
 
 		private string cApellidos;
@@ -31,8 +31,14 @@ namespace DeliveryOnline.Models {
 		private string cPassword;
 		private string cUsuario;
 		private int Id = 0;
-		public DeliveryOnline.Models.TipoCliente m_TipoCliente;
+
+        public int ClienteId { get; set; }
+
+        //Define una propiedad de navegación para la colección de objetos TipoCliente.
+        public virtual DeliveryOnline.Models.TipoCliente TipoCliente { get; set; } //m_TipoCliente { get; set; }
+
         //public DeliveryOnline.Models.TiendaUsuario m_TiendaUsuario;
+                
         public virtual ICollection<Tienda> Tiendas { get; set; }
 
 
