@@ -1,9 +1,0 @@
-PM> Enable-Migrations -Force
-Checking if the context targets an existing database...
-Code First Migrations enabled for project DeliveryOnline.
-PM> update-database -Verbose
-
-
-
-PM> Enable-Migrations -ContextTypeName QuaTangNhaTrang.Models.ShopDB -Force -EnableAutomaticMigrations
-

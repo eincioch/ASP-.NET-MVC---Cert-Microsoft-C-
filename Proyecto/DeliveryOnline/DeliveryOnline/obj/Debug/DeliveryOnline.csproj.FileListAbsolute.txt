@@ -92,6 +92,9 @@ E:\CursoLourtec\proyectoMVC-Delivery\ASP-.NET-MVC---Cert-Microsoft-C-\Proyecto\D
 E:\CursoLourtec\proyectoMVC-Delivery\ASP-.NET-MVC---Cert-Microsoft-C-\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.Web.xml
 E:\CursoLourtec\proyectoMVC-Delivery\ASP-.NET-MVC---Cert-Microsoft-C-\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.dll
 E:\CursoLourtec\proyectoMVC-Delivery\ASP-.NET-MVC---Cert-Microsoft-C-\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.pdb
+C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.csproj.CoreCompileInputs.cache
+C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.dll
+C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.pdb
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\bin\ApplicationInsights.config
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\bin\roslyn\csc.exe
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\bin\roslyn\csc.exe.config
@@ -183,6 +186,3 @@ C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\Deliver
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\bin\Microsoft.AI.Web.xml
 C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.csprojResolveAssemblyReference.cache
-C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.csproj.CoreCompileInputs.cache
-C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.dll
-C:\Users\Enrique\Source\Repos\prjDeliveryOnLine-EntityFrameword\Proyecto\DeliveryOnline\DeliveryOnline\obj\Debug\DeliveryOnline.pdb
