@@ -9,7 +9,7 @@ namespace DeliveryOnline.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(DeliveryOnline.Models.DeliveryOnLineContext context)
